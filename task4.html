@@ -17,7 +17,7 @@
     </nav>
     <div class="container mt-5">
         <h1 class="text-center mb-4">Registration Form</h1>
-        <form class="mx-auto p-4 border rounded" style="max-width:600px;" novalidate>
+        <form class="mx-auto p-4 border rounded was-validated" style="max-width:600px;" >
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label for="first" class="form-label">First Name:</label>
@@ -86,36 +86,5 @@
             <button type="reset" class="btn btn-secondary mt-2">Reset</button>
         </form>
     </div>
-    <script>
-        let form = document.querySelector("form");
-        let password = document.querySelector("#password");
-        let confirm = document.querySelector("#confirm");
-
-        form.addEventListener("submit" , function(event){
-            event.preventDefault();
-            confirm.setCustomValidity("");
-            if(password.value!==confirm.value){
-                confirm.setCustomValidity("Password dont match");
-            }
-            let inputs = document.querySelectorAll(".form-control, .form-select");
-            for(let input of inputs){
-                input.classList.remove("is-valid" , "is-invalid");
-
-                if(input.checkValidity()){
-                    input.classList.add("is-valid");
-                }
-                else{
-                    input.classList.add("is-invalid");
-                }
-            }
-        });
-        form.addEventListener("reset" , function(){
-            confirm.setCustomValidity("");
-            let inputs = document.querySelectorAll(".form-control, .form-select");
-            for(let input of inputs){
-                input.classList.remove("is-valid" , "is-invalid");
-            }
-        });
-    </script>
 </body>
 </html>

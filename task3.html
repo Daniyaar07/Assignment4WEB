@@ -17,7 +17,7 @@
     </nav>
     <div class="container mt-5">
         <h1 class="text-center mb-4">Contact Form Validation</h1>
-        <form class="mx-auto p-4 border rounded" style="max-width: 600px;" novalidate>
+        <form class="mx-auto p-4 border rounded was-validated" style="max-width: 600px;" >
             <div class="mb-3">
                 <label for="name" class="form-label">Name:</label>
                 <input type="text" id="name" name="name" class="form-control" required>
@@ -42,22 +42,5 @@
             <button type="submit" class="btn btn-dark">Submit</button>
         </form>
     </div>
-    <script>
-        let form = document.querySelector('form');
-        form.addEventListener("submit", function(event){
-            event.preventDefault();
-            let inputs = document.querySelectorAll(".form-control");
-            for(let input of inputs){
-                if(input.checkValidity()){
-                    input.classList.add("is-valid");
-                    input.classList.remove("is-invalid");
-                }
-                else{
-                    input.classList.add("is-invalid");
-                    input.classList.remove("is-valid");
-                }
-            }
-        });
-    </script>
 </body>
 </html>
