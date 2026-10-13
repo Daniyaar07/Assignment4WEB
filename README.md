@@ -15,7 +15,6 @@ This project demonstrates HTML forms, Bootstrap styling, and form validation.
 - HTML5
 - CSS3
 - Bootstrap 5
-- JavaScript
 
 ## How to Run
 1. Download or clone the repository.
